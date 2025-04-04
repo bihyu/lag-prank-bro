@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lag Simulator 😵</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: monospace;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .spam {
+      font-size: 24px;
+      animation: blink 0.2s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.2; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>LAG DETECTED 🔥</h1>
+  <p>System overload... free RAM: 0.1MB 😨</p>
+  <p>Loading... Please wait...</p>
+  <div id="spam" class="spam"></div>
+
+  <script>
+    alert("❗ PERINGATAN: HP kamu ngelag!");
+    
+    const text = "😵 SYSTEM FREEZING... ";
+    let i = 0;
+    setInterval(() => {
+      document.getElementById("spam").textContent += text;
+      i++;
+      if (i > 20) document.getElementById("spam").textContent = "";
+    }, 100);
+  </script>
+</body>
+</html>
